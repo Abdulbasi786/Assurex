@@ -1,0 +1,83 @@
+/* Scoped visual finishing layer — does not affect workspace layout or forms. */
+html body #axUxPanel.ax-ux-panel{
+  box-sizing:border-box; inset:0; padding:clamp(12px,3.5vw,28px);
+  background:rgba(3,9,24,.52);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  overflow-y:auto;overscroll-behavior:contain;
+}
+html body #axUxPanel .ax-ux-card{
+  box-sizing:border-box;width:min(560px,100%);min-width:0;max-height:min(680px,calc(100dvh - 28px));
+  overflow:auto;overscroll-behavior:contain;border-radius:24px;
+  background:linear-gradient(140deg,rgba(26,42,68,.92),rgba(11,24,44,.81))!important;
+  border:1px solid rgba(181,218,255,.22)!important;color:#f4f8ff!important;
+  box-shadow:0 28px 82px rgba(0,0,0,.44),inset 0 1px rgba(255,255,255,.15)!important;
+  backdrop-filter:blur(28px) saturate(150%);-webkit-backdrop-filter:blur(28px) saturate(150%);
+}
+html body #axUxPanel .ax-ux-card header{gap:12px;min-width:0;padding:18px 20px;background:rgba(255,255,255,.035);border-bottom:1px solid rgba(185,214,255,.13);}
+html body #axUxPanel .ax-ux-card header > div{min-width:0;}
+html body #axUxPanel .ax-ux-card header strong{font-size:16px;color:inherit;}
+html body #axUxPanel .ax-ux-card header small,html body #axUxPanel .ax-help p,
+html body #axUxPanel .ax-guided p,html body #axUxPanel .ax-lookup label,
+html body #axUxPanel .ax-review-grid small,html body #axUxPanel .ax-access p{color:#b8c9e4!important;font-size:clamp(12px,2.6vw,14px);line-height:1.6;}
+html body #axUxPanel .ax-ux-card > #axUxBody{padding:clamp(16px,4vw,24px);min-width:0;overflow-wrap:anywhere;}
+html body #axUxPanel .ax-help{padding:8px 2px 3px;}
+html body #axUxPanel .ax-help h3{font-size:clamp(19px,4vw,24px);line-height:1.25;color:inherit;margin:8px 0;}
+html body #axUxPanel .ax-help-icon{width:56px;height:56px;background:linear-gradient(135deg,rgba(103,142,255,.25),rgba(79,225,200,.14));border:1px solid rgba(138,206,255,.25);color:#a5e7fd;box-shadow:inset 0 1px rgba(255,255,255,.14);}
+html body #axUxPanel .ax-ux-card header button{flex:0 0 36px;width:36px;height:36px;color:inherit;background:rgba(255,255,255,.08);border:1px solid rgba(200,225,255,.16);}
+html body #axUxPanel .ax-help-actions{display:flex;flex-wrap:wrap;gap:10px;min-width:0;}
+html body #axUxPanel .ax-help-actions button{font-size:12px;min-height:40px;max-width:100%;}
+html body #axUxPanel .ax-help-actions button + button{background:rgba(141,187,255,.12);border:1px solid rgba(178,211,255,.25);color:#e9f3ff;}
+html body #axUxPanel .ax-ux-card :is(input,select,textarea){max-width:100%;min-width:0;box-sizing:border-box;}
+html[data-assurex-theme="light"] body #axUxPanel.ax-ux-panel{background:rgba(30,57,110,.28);}
+html[data-assurex-theme="light"] body #axUxPanel .ax-ux-card{
+  background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(232,241,255,.83))!important;
+  border-color:rgba(123,160,221,.38)!important;color:#173253!important;
+  box-shadow:0 28px 74px rgba(37,66,118,.2),inset 0 1px rgba(255,255,255,.9)!important;
+}
+html[data-assurex-theme="light"] body #axUxPanel .ax-ux-card header{background:rgba(255,255,255,.30);border-bottom-color:rgba(89,130,189,.16);}
+html[data-assurex-theme="light"] body #axUxPanel .ax-ux-card :is(header small,.ax-help p,.ax-guided p,.ax-lookup label,.ax-review-grid small,.ax-access p){color:#4d6283!important;}
+html[data-assurex-theme="light"] body #axUxPanel .ax-help-icon{background:linear-gradient(135deg,rgba(68,113,235,.12),rgba(37,185,171,.12));border-color:rgba(67,114,195,.18);color:#245dba;}
+html[data-assurex-theme="light"] body #axUxPanel .ax-ux-card header button{background:rgba(44,92,158,.065);border-color:rgba(67,115,190,.2);}
+html[data-assurex-theme="light"] body #axUxPanel .ax-help-actions button + button{background:rgba(44,92,158,.07);border-color:rgba(67,115,190,.23);color:#22476f;}
+html[data-assurex-theme="light"] body #axUxPanel .ax-review-grid >div,html[data-assurex-theme="light"] body #axUxPanel .ax-claim-tools{border-color:rgba(76,118,181,.2);background:rgba(255,255,255,.26);}
+/* Glass assistant; conservative overrides leave the assistant's forms and behaviours intact. */
+html body .ax-chat-shell #axChatPanel.ax-chat-panel{
+  background:linear-gradient(140deg,rgba(23,39,67,.94),rgba(12,28,49,.91))!important;
+  border-color:rgba(177,208,255,.24)!important;
+  backdrop-filter:blur(24px) saturate(135%);-webkit-backdrop-filter:blur(24px) saturate(135%);
+  box-shadow:0 20px 65px rgba(0,0,0,.36),inset 0 1px rgba(255,255,255,.09)!important;
+}
+html[data-assurex-theme="light"] body .ax-chat-shell #axChatPanel.ax-chat-panel{
+  background:linear-gradient(145deg,rgba(255,255,255,.95),rgba(235,244,255,.91))!important;
+  border-color:rgba(105,148,218,.32)!important;
+  box-shadow:0 20px 52px rgba(39,81,140,.18),inset 0 1px rgba(255,255,255,.95)!important;
+}
+@media(max-width:700px){
+  html body #axUxPanel.ax-ux-panel{padding:12px;place-items:center;}
+  html body #axUxPanel .ax-ux-card{width:100%;max-height:calc(100dvh - 24px);border-radius:19px;}
+  html body #axUxPanel .ax-ux-card header{padding:13px 15px;}
+  html body #axUxPanel .ax-ux-card > #axUxBody{padding:15px;}
+  html body #axUxPanel .ax-help-actions > button{flex:1 1 120px;}
+  html body .ax-chat-shell #axChatPanel.ax-chat-panel{
+    box-sizing:border-box;position:fixed!important;right:12px!important;left:auto!important;
+    bottom:calc(var(--ax-chat-bottom,122px) + var(--ax-control-size,50px) + 9px)!important;
+    width:min(340px,calc(100vw - 24px))!important;max-width:calc(100vw - 24px)!important;
+    height:min(420px,calc(100dvh - var(--ax-chat-bottom,122px) - var(--ax-control-size,50px) - 22px))!important;
+    max-height:calc(100dvh - var(--ax-chat-bottom,122px) - var(--ax-control-size,50px) - 22px)!important;
+    min-height:0!important;border-radius:18px!important;overflow:hidden;
+  }
+  html body .ax-chat-shell .ax-chat-header{padding:10px 12px;gap:8px;}
+  html body .ax-chat-shell .ax-chat-avatar{height:32px;width:32px;border-radius:10px;}
+  html body .ax-chat-shell .ax-chat-heading strong{font-size:13px;}
+  html body .ax-chat-shell .ax-chat-heading span{font-size:10px;}
+  html body .ax-chat-shell .ax-chat-intro{display:none!important;}
+  html body .ax-chat-shell .ax-chat-messages{flex:1 1 auto;min-height:0!important;padding:10px 12px;overflow-y:auto;}
+  html body .ax-chat-shell .ax-chat-message{font-size:12px;line-height:1.42;padding:9px 11px;}
+  html body .ax-chat-shell .ax-chat-suggestions{flex:0 0 auto;flex-wrap:nowrap;overflow-x:auto;padding:7px 10px;gap:6px;}
+  html body .ax-chat-shell .ax-chat-suggestions button{font-size:10px;min-height:30px;white-space:nowrap;padding:6px 8px;}
+  html body .ax-chat-shell .ax-chat-form{flex:0 0 auto;padding:9px 10px;}
+  html body .ax-chat-shell .ax-chat-form input{font-size:16px!important;}
+  html body .ax-chat-shell .ax-chat-footnote{display:none!important;}
+}
+@media(max-height:470px) and (max-width:900px){
+  html body .ax-chat-shell #axChatPanel.ax-chat-panel{bottom:8px!important;height:calc(100dvh - 16px)!important;max-height:calc(100dvh - 16px)!important;}
+}

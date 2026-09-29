@@ -1,0 +1,20 @@
+/* AssureX field focus: no click glow; keyboard users retain an accessible indicator. */
+input:not([type="checkbox"]):not([type="radio"]):focus:not(.field-error),
+textarea:focus:not(.field-error), select:focus:not(.field-error),
+input:not([type="checkbox"]):not([type="radio"]):active:not(.field-error),
+textarea:active:not(.field-error), select:active:not(.field-error) {
+  outline: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
+}
+input:not([type="checkbox"]):not([type="radio"]):focus:not(:focus-visible):not(.field-error),
+textarea:focus:not(:focus-visible):not(.field-error), select:focus:not(:focus-visible):not(.field-error) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--accent, #659cf7) !important;
+  outline-offset: 2px !important;
+}
+@media (forced-colors:active) { input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid Highlight !important; } }

@@ -1,0 +1,14 @@
+/* Profile claim stream; glass treatment shared with both themes. */
+.profile-claim-alerts{padding:clamp(16px,2.5vw,27px);margin:20px 0 28px;min-width:0;border-radius:20px}
+.profile-claim-alerts-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+.profile-claim-alerts-head h2{font-size:clamp(18px,2vw,23px);margin:5px 0 6px}
+.profile-claim-alerts-head p,.profile-claim-alert-list>p{font-size:12px;line-height:1.6;color:var(--muted,#91a1b7)}
+.profile-claim-count{display:grid;place-items:center;min-width:38px;height:38px;border-radius:12px;border:1px solid rgba(111,166,233,.33);background:rgba(71,139,231,.12);font-weight:800}
+.profile-claim-alert-list{display:grid;gap:10px;min-width:0}
+.profile-claim-alert{display:flex;gap:12px;align-items:center;padding:13px 15px;border:1px solid rgba(140,170,212,.18);border-radius:12px;background:rgba(122,162,210,.055);color:inherit;text-decoration:none;min-width:0}
+.profile-claim-alert:hover,.profile-claim-alert:focus-visible{background:rgba(98,150,216,.12);border-color:rgba(98,150,216,.38)}
+.profile-claim-alert-text{display:grid;gap:4px;min-width:0;flex:1}
+.profile-claim-alert-text strong{font-size:13px}.profile-claim-alert-text small{color:var(--muted,#91a1b7);font-size:11px;line-height:1.5;overflow-wrap:anywhere}
+.profile-claim-alert i{width:7px;height:7px;flex:0 0 7px;border-radius:99px;background:var(--accent,#659cf7)}
+.profile-claim-alert.read i{opacity:.2}
+@media(max-width:560px){.profile-claim-alerts{padding:14px}.profile-claim-alert{padding:11px}}
