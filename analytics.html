@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="AssureX — AI-powered warranty claim intelligence and decision support." name="description"/>
+<meta content="#060912" name="theme-color"/>
+<title>AssureX — Analytics</title>
+<link href="asset/fav.png" rel="shortcut icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/fixes.css">
+  <script src="js/theme.js"></script>
+  <script src="js/vendor/gsap.min.js" defer></script>
+  <script src="js/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="js/animate.js" defer></script>
+  <script src="js/ml-analytics.js" defer></script>
+<link rel="stylesheet" href="css/role-ui.css">
+<link rel="stylesheet" href="css/ai-intelligence.css">
+<link rel="stylesheet" href="css/experience-features.css">
+  <link rel="stylesheet" href="css/assurex-chatbot.css">
+<link rel="stylesheet" href="css/assurex-premium-all-pages.css">
+<link rel="stylesheet" href="css/assurex-viewport-controls.css">
+<link rel="stylesheet" href="css/responsive-refresh.css">
+</head>
+<body class="assurex-analytics-layout"><div class="background-grid"></div><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><div class="ambient ambient-three"></div><div class="app" id="appView">
+<!-- SIDEBAR -->
+<aside class="sidebar glass" id="sidebar">
+<div class="sidebar-header">
+<a class="dashboard-brand" href="#">
+<img alt="AssureX" src="asset/assurex-logo-dark.png"/>
+</a>
+<button aria-label="Close menu" class="icon-button mobile-only" id="closeSidebar">
+                    ×
+                </button>
+</div>
+<div class="sidebar-section-label">
+                WORKSPACE
+            </div>
+<nav class="sidebar-nav">
+<button class="nav-item active" data-page="dashboard">
+<span>⌂</span>
+                    Dashboard
+                </button>
+<button class="nav-item" data-page="products">
+<span>▣</span>
+                    Products
+                </button>
+<button class="nav-item" data-page="warranties">
+<span>◇</span>
+                    Warranties
+                </button>
+<button class="nav-item" data-page="documents">
+<span>▤</span>
+                    Documents
+                </button>
+<button class="nav-item" data-page="claims">
+<span>◉</span>
+                    Claims
+                </button>
+<button class="nav-item" data-page="validation">
+<span>✓</span>
+                    Validation
+                </button>
+<button class="nav-item" data-page="evaluation">
+<span>AI</span>
+                    AI Evaluation
+                </button>
+<button class="nav-item" data-page="decision">
+<span>◆</span>
+                    Decision &amp; Review
+                </button>
+<div class="sidebar-section-label">
+                    MANAGEMENT
+                </div>
+<a class="nav-item" data-page="analytics" href="analytics.html">
+<span>▥</span>
+                    Analytics
+                </a>
+<button class="nav-item" data-page="readiness">
+<span>◎</span>
+                    Readiness
+                </button>
+<button class="nav-item" data-page="profile">
+<span>◯</span>
+                    Profile
+                </button>
+</nav>
+<div class="sidebar-bottom">
+<div class="sidebar-user">
+<div class="avatar" id="userAvatar">
+                        U
+                    </div>
+<div>
+<strong id="profileName">User</strong>
+<small id="profileRole">Reviewer</small>
+</div>
+</div>
+<button class="logout-button" id="logout">
+                    <span aria-hidden="true">↪</span> Sign out
+                </button>
+</div>
+</aside>
+<!-- MAIN APPLICATION -->
+<div class="app-main">
+<!-- TOPBAR -->
+<header class="topbar glass">
+<button class="icon-button mobile-only" id="sidebarToggle">
+                    ☰
+                </button>
+<div class="global-search">
+<span>⌕</span>
+<input id="globalSearch" placeholder="Search claims, products, documents..." type="search"/>
+
+</div>
+<div class="topbar-actions">
+<button class="icon-button" id="themeButton" title="Themes">
+                        ◐
+                    </button>
+
+
+<button class="icon-button notification-button" id="notifyButton" title="Notifications">
+                        ♢
+                        <i></i>
+</button>
+</div>
+</header>
+<!-- THEME MENU -->
+<div class="theme-menu glass hidden" id="themeMenu">
+<div class="theme-menu-header">
+<strong>Appearance</strong>
+<button class="icon-button" id="closeTheme">
+                        ×
+                    </button>
+</div>
+<small id="currentTheme">
+                    Electric Blue &amp; Teal
+                </small>
+<button class="theme-choice" data-theme="light">
+    Light Mode
+</button>
+<button class="theme-choice" data-theme="dark">
+    Dark Mode
+</button>
+</div>
+<!-- =====================================================
+           PAGES
+      ====================================================== -->
+<main class="dashboard-content">
+<!-- DASHBOARD -->
+<!-- PRODUCTS -->
+<!-- WARRANTIES -->
+<!-- DOCUMENTS -->
+<!-- CLAIMS -->
+<!-- VALIDATION -->
+<!-- EVALUATION -->
+<!-- DECISION -->
+<!-- ANALYTICS -->
+<section class="page" data-page="analytics">
+<div class="page-heading">
+<div>
+<div class="eyebrow">ADMIN &amp; ANALYTICS</div>
+<h1>Claim Analytics</h1>
+<p>Explore operational claim information.</p>
+</div>
+<button class="btn btn-gradient" id="exportClaims">
+                            Export CSV
+                        </button>
+</div>
+<div class="analytics-summary" style="margin-top:12px"><div class="stat-card glass"><span>Duplicate Flags</span><strong id="analyticsDuplicates">—</strong></div><div class="stat-card glass"><span>Model Disagreements</span><strong id="analyticsDisagreements">—</strong></div><div class="stat-card glass"><span>Avg Top Confidence</span><strong id="analyticsConfidence">—</strong></div><div class="stat-card glass"><span>Warranty Expiring</span><strong id="analyticsExpiring">—</strong></div></div>
+<div class="card glass" style="margin-top:18px"><div class="card-header"><div><span class="eyebrow">OPERATIONAL ANALYTICS</span><h2>Faults, rejection reasons &amp; review frequency</h2></div></div><div id="analyticsBreakdowns" class="analytics-bars"></div></div>
+<div class="analytics-summary">
+<div class="stat-card glass"><span>Total</span><strong id="analyticsTotal">—</strong></div>
+<div class="stat-card glass"><span>Valid</span><strong id="analyticsValid">—</strong></div>
+<div class="stat-card glass"><span>Invalid</span><strong id="analyticsInvalid">—</strong></div>
+<div class="stat-card glass"><span>Review</span><strong id="analyticsReview">—</strong></div>
+</div>
+<div class="card glass analytics-chart">
+<div class="card-header">
+<div>
+<span class="eyebrow">CLAIM DISTRIBUTION</span>
+<h2>Classification Overview</h2>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><input class="compact-input" id="claimSearch" placeholder="Search claims..."/><select class="compact-input" id="statusFilter"><option value="">All statuses</option><option>Pending</option><option>Under Evaluation</option><option>Manual Review</option><option>Approved</option><option>Rejected</option><option>Closed</option></select><select class="compact-input" id="decisionFilter"><option value="">All decisions</option><option>Valid Claim</option><option>Invalid Claim</option><option>Manual Review</option><option>Approve</option><option>Reject</option></select></div>
+</div>
+<div class="analytics-bars" id="analyticsBars">
+<div><span>Valid</span><i><b id="validBar" style="width:0%"></b></i><strong id="validPct">0%</strong></div>
+<div><span>Invalid</span><i><b id="invalidBar" style="width:0%"></b></i><strong id="invalidPct">0%</strong></div>
+<div><span>Manual Review</span><i><b id="reviewBar" style="width:0%"></b></i><strong id="reviewPct">0%</strong></div>
+</div>
+<div id="analyticsStatus" style="margin-top:14px;font-size:.82rem;opacity:.7">Loading live claim data…</div>
+</div>
+</section>
+<!-- READINESS -->
+<!-- PROFILE -->
+</main>
+</div>
+</div><div class="modal-overlay hidden" id="commandPalette">
+<div class="command-palette glass">
+<div class="command-header">
+<input id="commandInput" placeholder="Search commands..."/>
+<button class="icon-button" id="closeCommand">
+                    ×
+                </button>
+</div>
+<div id="commandResults"></div>
+</div>
+</div><div class="toast" id="toast">
+        Ready
+    </div><script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script><script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script><script src="js/firebase-config.js"></script><script src="js/firebase-auth.js"></script><script src="js/role-guard.js"></script><script src="js/firebase-firestore.js"></script><script src="js/app.js"></script>
+<script src="js/claim-operations.js"></script>
+<script>
+(function(){
+"use strict";
+let analyticsClaims=[];
+const $=id=>document.getElementById(id);
+const esc=v=>String(v==null?"":v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function status(c){
+  return String(c.status||c.claimStatus||c.validationStatus||c.decision||c.result||"").trim().toLowerCase();
+}
+function bucket(c){
+  const st=status(c);
+  if(["approved","validated","valid","accepted","covered"].includes(st)) return "valid";
+  if(["rejected","invalid","declined","denied"].includes(st)) return "invalid";
+  if(["pending","pending review","manual review","under evaluation","in review","review","needs review"].includes(st)) return "review";
+  if(c.validation && (c.validation.valid===false || c.validation.status==="invalid")) return "invalid";
+  if(c.validation && (c.validation.valid===true || c.validation.status==="valid")) return "valid";
+  return "review";
+}
+function pct(n,total){return total?Math.round(n*100/total):0}
+function render(){
+  const q=String($("claimSearch")?.value||"").trim().toLowerCase();
+  const sf=String($("statusFilter")?.value||""); const df=String($("decisionFilter")?.value||"");
+  const filtered=analyticsClaims.filter(c=>(!q || JSON.stringify(c).toLowerCase().includes(q)) && (!sf || AssureXOperations.normStatus(c)===sf) && (!df || String(c.finalDecision||c.reviewDecision||c.predictedDecision||c.predictionLabel||"")===df));
+  const counts={valid:0,invalid:0,review:0};
+  filtered.forEach(c=>counts[bucket(c)]++);
+  const duplicateCount=filtered.filter(c=>c.duplicateDetected===true||c.duplicate===true||c.validation&&c.validation.duplicate===true||c.fraud&&c.fraud.duplicate===true).length;
+  const comparisons=filtered.map(c=>window.AssureXOperations?.compareModels(c)).filter(r=>r&&r.python&&r.teachableMachine);
+  const disagreementCount=comparisons.filter(r=>r.status==='Model Disagreement').length;
+  const confidences=comparisons.filter(r=>Number.isFinite(r.python.confidence)&&Number.isFinite(r.teachableMachine.confidence)).map(r=>Math.max(r.python.confidence,r.teachableMachine.confidence));
+  const total=filtered.length;
+  $("analyticsTotal").textContent=total;
+  $("analyticsValid").textContent=counts.valid;
+  $("analyticsInvalid").textContent=counts.invalid;
+  $("analyticsReview").textContent=counts.review;
+  const vp=pct(counts.valid,total), ip=pct(counts.invalid,total), rp=pct(counts.review,total);
+  [["validBar",vp],["invalidBar",ip],["reviewBar",rp]].forEach(([id,v])=>$(id).style.width=v+"%");
+  $("validPct").textContent=vp+"%";
+  $("invalidPct").textContent=ip+"%";
+  $("reviewPct").textContent=rp+"%";
+  $("analyticsDuplicates").textContent=duplicateCount;
+  $("analyticsDisagreements").textContent=disagreementCount;
+  $("analyticsConfidence").textContent=confidences.length?Math.round(confidences.reduce((a,b)=>a+b,0)/confidences.length*100)+"%":"—";
+  const threshold=Number(localStorage.getItem('assurexWarrantyAlertDays')||30);
+  let expiringCount=0; filtered.forEach(c=>{const d=c.warranty?.expiryDate||c.warrantyExpiry||c.expiryDate;if(!d)return;const dt=new Date(d);if(!isNaN(dt)&&((dt-Date.now())/86400000)>=0&&((dt-Date.now())/86400000)<=threshold)expiringCount++;});
+  $("analyticsExpiring").textContent=expiringCount;
+  const faults={},reasons={};filtered.forEach(c=>{const f=String(c.faultDescription||c.damageCategory||c.damage||'Unspecified').trim()||'Unspecified';faults[f]=(faults[f]||0)+1;if(bucket(c)==='invalid'){const r=String(c.decisionReason||c.finalDecisionReason||c.statusNote||c.validation?.reason||'Unspecified').trim()||'Unspecified';reasons[r]=(reasons[r]||0)+1;}});
+  const bars=[...Object.entries(faults).sort((a,b)=>b[1]-a[1]).slice(0,5)].map(([k,v])=>({label:'Fault: '+k,value:v})).concat([...Object.entries(reasons).sort((a,b)=>b[1]-a[1]).slice(0,5)].map(([k,v])=>({label:'Rejected reason: '+k,value:v})));const max=Math.max(1,...bars.map(x=>x.value));$("analyticsBreakdowns").innerHTML=bars.length?bars.map(x=>'<div><span>'+esc(x.label)+'</span><i><b style="width:'+(x.value/max*100)+'%"></b></i><strong>'+x.value+'</strong></div>').join(''):'<div style="opacity:.65">No breakdown data available yet.</div>';
+  $("analyticsStatus").textContent=q
+    ? `Showing ${total} matching claim${total===1?"":"s"} from ${analyticsClaims.length} loaded.`
+    : `Live data: ${analyticsClaims.length} claim${analyticsClaims.length===1?"":"s"} for the signed-in user.`;
+}
+async function load(user){
+  $("analyticsStatus").textContent="Loading live claim data…";
+  try{
+    const claimDocs=(await DbService.getClaims()).map(row=>({id:row.id,data:()=>row}));
+    analyticsClaims=claimDocs.map(d=>({id:d.id,...d.data()}));window.AssureXClaims=analyticsClaims;window.dispatchEvent(new CustomEvent('assurex-claims-loaded'));
+    render();
+  }catch(e){
+    console.error("[AssureX] Analytics load failed",e);
+    analyticsClaims=[];
+    render();
+    $("analyticsStatus").textContent="Could not load claims. Check Firestore permissions.";
+  }
+}
+window.AssureXReloadClaims=function(){if(window.fbAuth&&window.fbAuth.currentUser)return load(window.fbAuth.currentUser)};
+function csvCell(v){return '"'+String(v==null?"":v).replace(/"/g,'""')+'"'}
+function exportCsv(){
+  if(!analyticsClaims.length){ $("analyticsStatus").textContent="No claims available to export."; return; }
+  const source=analyticsClaims.filter(c=>{const q=String($("claimSearch")?.value||"").trim().toLowerCase(),sf=String($("statusFilter")?.value||""),df=String($("decisionFilter")?.value||"");return (!q||JSON.stringify(c).toLowerCase().includes(q))&&(!sf||AssureXOperations.normStatus(c)===sf)&&(!df||String(c.finalDecision||c.reviewDecision||c.predictedDecision||c.predictionLabel||"")===df)});
+  const rows=source.map(c=>({
+    claimId:c.claimId||c.id,
+    status:c.status||c.claimStatus||c.validationStatus||"",
+    product:c.product?.name||c.productName||c.productId||"",
+    damage:c.damageCategory||c.damage||"",
+    createdAt:c.createdAt?.toDate?c.createdAt.toDate().toISOString():(c.createdAt||"")
+  }));
+  const head=["Claim ID","Status","Product","Damage Category","Created At"];
+  const csv=[head,...rows.map(r=>head.map(h=>csvCell(r[{ "Claim ID":"claimId","Status":"status","Product":"product","Damage Category":"damage","Created At":"createdAt"}[h]])))].map(r=>r.join(",")).join("\r\n");
+  const blob=new Blob([csv],{type:"text/csv;charset=utf-8"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="assurex-claims-"+new Date().toISOString().slice(0,10)+".csv"; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+function init(){
+  if(!window.fbAuth||!window.fbDb){$("analyticsStatus").textContent="Firebase is not available.";return}
+  $("claimSearch")?.addEventListener("input",render);
+  $("exportClaims")?.addEventListener("click",exportCsv);
+  window.addEventListener("assurex-role-ready",()=>{if(window.fbAuth.currentUser)load(window.fbAuth.currentUser);});
+  window.fbAuth.onAuthStateChanged(user=>{
+    if(user){
+      $("profileName").textContent=user.displayName||user.email||"User";
+      $("profileRole").textContent="Reviewer";
+      $("userAvatar").textContent=(user.displayName||user.email||"U").charAt(0).toUpperCase();
+      load(user);
+    }else{
+      analyticsClaims=[]; render();
+      $("analyticsStatus").textContent="Sign in to view your analytics.";
+    }
+  });
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+})();
+</script><script src="js/nav-fix.js"></script>
+<script src="js/profile-shortcut.js"></script>
+<link rel="stylesheet" href="css/topbar-upgrade.css"><script src="js/topbar-upgrade.js"></script><script src="js/assurex-api.js" defer></script>
+<script src="js/ai-intelligence.js" defer></script>
+<script src="js/experience-features.js" defer></script>
+  <script src="js/assurex-chatbot.js" defer></script>
+<script src="js/sidebar-memory.js" defer></script><link rel="stylesheet" href="css/assurex-final-polish.css">
+<link rel="stylesheet" href="css/global-live-search.css">
+<link rel="stylesheet" href="css/input-focus-refinement.css">
+<script src="js/global-live-search.js" defer></script>
+<link rel="stylesheet" href="css/help-chat-glass-final.css">
+<link rel="stylesheet" href="css/project-charts.css">
+<script src="js/project-charts.js" defer></script>
+</body>
+</html>

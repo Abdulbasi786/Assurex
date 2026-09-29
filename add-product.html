@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AssureX — Add Product</title>
+  <link rel="stylesheet" href="css/add-product.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <script src="js/theme.js"></script>
+  <script src="js/vendor/gsap.min.js" defer></script>
+  <script src="js/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="js/animate.js" defer></script>
+  <link rel="stylesheet" href="css/fixes.css">
+<link rel="stylesheet" href="css/ai-intelligence.css">
+<link rel="stylesheet" href="css/experience-features.css">
+  <link rel="stylesheet" href="css/assurex-chatbot.css">
+  <link rel="stylesheet" href="css/barcode-scan.css">
+<link rel="stylesheet" href="css/assurex-premium-all-pages.css">
+<link rel="stylesheet" href="css/assurex-viewport-controls.css">
+<link rel="stylesheet" href="css/responsive-refresh.css">
+</head>
+
+<body>
+  <main class="shell"><div class="global-search ax-standalone-search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="Search claims, products, documents…" aria-label="Search your workspace"></div>
+    <section class="card">
+      <header class="header">
+        <div>
+          <div class="eyebrow">PRODUCT MANAGEMENT</div>
+          <h1>Add Product</h1>
+          <p>Add a product using the same fields stored in your Firestore <b>products</b> collection.</p>
+        </div>
+        <button class="close" type="button" onclick="history.back()">×</button>
+      </header>
+
+      <form id="addProductForm">
+        <div class="section">PRODUCT DETAILS</div>
+        <div class="grid">
+          <label>Product ID *
+            <input id="product_id" name="product_id" required placeholder="PRD-55645">
+          </label>
+          <label>Product Name *
+            <input id="name" name="name" required placeholder="Laptop">
+          </label>
+          <label>Brand *
+            <input id="brand" name="brand" required placeholder="Samsung">
+          </label>
+          <label>Category *
+            <input id="category" name="category" required placeholder="Home Appliance">
+          </label>
+          <label>Model Number *
+            <input id="model_number" name="model_number" required placeholder="123456789">
+          </label>
+          <label>Serial Number *
+            <input id="serial_number" name="serial_number" required placeholder="Test-Se-123">
+          </label>
+          <label>Price *
+            <input id="price" name="price" type="number" min="0" step="1" required placeholder="95299">
+          </label>
+          <label>Retailer
+            <input id="retailer" name="retailer" placeholder="Tech Zone">
+          </label>
+          <label>Purchase Date *
+            <input id="purchase_date" name="purchase_date" type="date" required>
+          </label>
+          <label>User ID *
+            <input id="user_id" name="user_id" required placeholder="USR-1001">
+          </label>
+        </div>
+
+        <div class="section">WARRANTY</div>
+        <div class="grid">
+          <label>Warranty Months *
+            <input id="warranty_months" name="warranty_months" type="number" min="0" step="1" required placeholder="12">
+          </label>
+          <label>Extended Warranty Months
+            <input id="extended_warranty_months" name="extended_warranty_months" type="number" min="0" step="1"
+              value="0">
+          </label>
+          <label>Warranty Provider *
+            <input id="warranty_provider" name="warranty_provider" required placeholder="Samsung">
+          </label>
+          <label>Service Center
+            <input id="service_center" name="service_center" placeholder="Samsung Care Center">
+          </label>
+        </div>
+
+        <div class="section">COVERAGE & EXCLUSIONS</div>
+        <div class="two">
+          <label>Coverage Conditions
+            <textarea id="coverage_conditions" name="coverage_conditions" rows="5"
+              placeholder="Enter covered conditions..."></textarea>
+          </label>
+          <label>Exclusions
+            <textarea id="exclusions" name="exclusions" rows="5" placeholder="Enter exclusions..."></textarea>
+          </label>
+        </div>
+
+        <div id="message" class="message" hidden></div>
+
+        <footer>
+          <button type="button" class="secondary" onclick="history.back()">Cancel</button>
+          <button type="submit" class="primary">Add Product</button>
+        </footer>
+      </form>
+    </section>
+  </main>
+
+  <!-- Load your existing Firebase SDK/config before this file.
+       add-product.js intentionally uses window.fbDb/window.fbAuth
+       and does not redeclare Firebase variables. -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+
+  <!-- Firebase configuration -->
+
+  <script src="js/firebase-config.js"></script><script src="js/firebase-auth.js"></script><script src="js/notifications-service.js"></script><script src="js/role-guard.js"></script>
+
+  <!-- Products JavaScript -->
+
+  <script src="js/add-product.js"></script>
+<script src="js/assurex-api.js" defer></script>
+<script src="js/ai-intelligence.js" defer></script>
+<script src="js/experience-features.js" defer></script>
+  <script src="js/assurex-chatbot.js" defer></script>
+  <script src="js/barcode-scan.js" defer></script>
+<link rel="stylesheet" href="css/assurex-final-polish.css">
+<link rel="stylesheet" href="css/global-live-search.css">
+<link rel="stylesheet" href="css/input-focus-refinement.css">
+<script src="js/global-live-search.js" defer></script>
+<link rel="stylesheet" href="css/help-chat-glass-final.css">
+</body>
+
+</html>
